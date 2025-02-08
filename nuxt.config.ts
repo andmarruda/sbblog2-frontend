@@ -1,11 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/image'],
+  modules: [
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
+  ],
   runtimeConfig: {
     public: {
       appName: process.env.APP_NAME,
@@ -82,10 +83,8 @@ export default defineNuxtConfig({
       }
     },
   },
-  css: ['~/assets/css/main.css'],
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
-  }
+  css: [
+    '~/assets/css/main.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
+  ],
 })

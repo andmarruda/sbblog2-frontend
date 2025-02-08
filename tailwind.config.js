@@ -4,6 +4,8 @@ export default {
     './app.vue',
     './components/*.vue',
     './pages/*.vue',
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
   ],
   theme: {
     extend: {
@@ -14,9 +16,12 @@ export default {
       colors: {
         'primary': '#1d1d1f',
         'secondary': '#86868b',
+        'highlight': '#104486',
+      },
+      backgroundColor: {
+        'highlight': '#104486',
       }
     },
   },
   plugins: [],
 }
-
