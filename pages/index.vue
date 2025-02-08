@@ -1,5 +1,3 @@
 <template>
-  <header>
-    <SocialMediaBar />
-  </header>
+  <Header />
 </template>

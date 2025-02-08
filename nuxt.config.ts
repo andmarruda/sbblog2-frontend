@@ -5,6 +5,54 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  modules: ['@nuxt/image'],
+  runtimeConfig: {
+    public: {
+      appName: process.env.APP_NAME,
+      socialNetworks: [
+        {
+          name: 'Facebook',
+          url: process.env.SOCIAL_FACEBOOK,
+          icon: 'facebook',
+        },
+        {
+          name: 'Twitter',
+          url: process.env.SOCIAL_TWITTER,
+          icon: 'twitter',
+        },
+        {
+          name: 'Instagram',
+          url: process.env.SOCIAL_INSTAGRAM,
+          icon: 'instagram',
+        },
+        {
+          name: 'LinkedIn',
+          url: process.env.SOCIAL_LINKEDIN,
+          icon: 'linkedin',
+        },
+        {
+          name: 'YouTube',
+          url: process.env.SOCIAL_YOUTUBE,
+          icon: 'youtube',
+        },
+        {
+          name: 'GitHub',
+          url: process.env.SOCIAL_GITHUB,
+          icon: 'github',
+        },
+        {
+          name: 'Telegram',
+          url: process.env.SOCIAL_TELEGRAM,
+          icon: 'telegram',
+        },
+        {
+          name: 'TikTok',
+          url: process.env.SOCIAL_TIKTOK,
+          icon: 'tiktok',
+        },
+      ],
+    },
+  },
   app: {
     head: {
       link: [
@@ -28,8 +76,11 @@ export default defineNuxtConfig({
         {
           title: process.env.APP_NAME,
         }
-      ]
-    }
+      ],
+      bodyAttrs: {
+        class: 'bg-[#eee]',
+      }
+    },
   },
   css: ['~/assets/css/main.css'],
   vite: {
